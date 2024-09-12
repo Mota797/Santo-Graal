@@ -1,0 +1,51 @@
+/*
+1- Possui 1 header, 3 colunas e um footer
+2- Colunas de tamanho igual
+3- Rodapé fixo
+4- Primeiro HTML
+5- Marcação mínima
+*/
+
+*{
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+}
+body{
+    text-align: center; /* Centraliza o texto em todo o corpo da página */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o texto */
+}
+h1{
+    text-decoration: underline; /* Adiciona sublinhado ao título <h1> */
+}
+header{
+    background-color: violet; /* Define a cor de fundo do cabeçalho como violeta */
+}
+body.container{
+    display: flex; /* Usa o modelo Flexbox para organizar o layout do corpo */
+    flex-direction: column; /* Coloca os elementos dentro do corpo (header, conteúdo, footer) em uma coluna vertical */
+    min-height: 100vh; /* Faz o corpo ocupar pelo menos 100% da altura da janela do navegador */
+}
+.content{
+    display: flex; /* Configura o conteúdo para exibir as três colunas em linha usando Flexbox */
+    flex: 1; /* Faz com que o conteúdo expanda para ocupar o espaço restante entre o header e o footer */
+}
+main{
+    background-color: blueviolet; /* Define a cor de fundo do conteúdo principal como azul-violeta */
+    color: #fff; /* Define a cor do texto do conteúdo principal como branco */
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante entre as colunas laterais */
+}
+.esquerda{
+    background-color: aqua; /* Define a cor de fundo da barra lateral esquerda como aqua */
+    order: -1; /* Move a barra lateral esquerda para antes do conteúdo principal, alterando a ordem de exibição */
+}
+.direita{
+    background-color: aqua; /* Define a cor de fundo da barra lateral direita como aqua */
+}
+.esquerda, .direita{
+    flex-basis: 100px; /* Define a largura fixa das barras laterais como 100px */
+}
+footer{
+    background-color: deeppink; /* Define a cor de fundo do rodapé como rosa choque */
+}
+footer, header{
+    padding: 30px; /* Adiciona 30px de padding ao rodapé e ao cabeçalho */
+}
